@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<style>
+    .top-left {
+        position: absolute;
+        top: 6px;
+        left: 16px;
+      }
+    .header{
+        font-size: 40px;
+        text-align: center;
+        font-style:italic;
+    }
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<body>
+  <div class="top-left"><h1><a href="/" style="color: black;font-style: italic;" class="btn btn-success">home Page</a></h1></div>
+    <div class="header">
+        <h1 style="margin-top: 2%;margin-bottom: 2%;">Menu</h1>
+        
+        <hr>
+    </div>
+    
+    <div>
+        <table>
+            <tr>
+              <th>Name</th>
+              <th>Detail</th>
+              <th>Category</th>
+              <th>Price</th>
+            </tr>
+            {% for menu in menu %}
+            <tr>
+              <td>{{menu.name}}</td>
+              <td>{{menu.detail}}</td>
+              <td>{{menu.category}}</td>
+              <td>{{menu.price}}$</td>
+            </tr>
+            {% endfor %}
+          </table>
+    </div>
+</body>
+</html>
