@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<style>
+    .centered {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .date{
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      p{
+        font-size: 30px;
+        text-align: center;
+      }
+</style>
+<body>
+    <div>
+        <img height="600px" width="1350px" src="{{ url_for('static', path='pic'~ item.slug ~'.png') }}" alt="">
+        <h1 class="centered" style="font-size: 200px;">{{item.title}}</h1>
+        <h1 class="date">Posted by {{item.author}} on {{item.date}}</h1>
+    </div>
+    <div>
+        <p>{{item.text}}</p>
+    </div>
+</body>
+</html>
