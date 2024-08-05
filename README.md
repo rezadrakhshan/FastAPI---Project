@@ -65,10 +65,6 @@
             <td>Todo App</td>
             <td>A simple todo list application using FastAPI.</td>
         </tr>
-        <tr>
-            <td>Todo-App</td>
-            <td>An enhanced todo list application with additional features.</td>
-        </tr>
     </tbody>
 </table>
 
